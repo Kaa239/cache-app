@@ -27,6 +27,7 @@ func NewOrderHandler(orderService service.OrderService) *OrderHandler {
 // @Failure 404 {object} map[string]string
 // @Router /api/v1/orders/{id} [get]
 func (h *OrderHandler) GetOrderByUID(c *gin.Context) {
+	print("GetOrderByUID")
 	orderUID := c.Param("id")
 	if orderUID == "" {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "order id is required"})

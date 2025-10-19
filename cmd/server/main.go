@@ -22,7 +22,6 @@ import (
 // @version 1.0
 // @description API for managing orders
 // @host localhost:8080
-// @BasePath /api/v1
 func main() {
 	cfg := config.Load()
 
